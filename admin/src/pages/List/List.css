@@ -1,0 +1,7 @@
+.list{
+    width: 70%;
+    margin-left: max(3vw, 20px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}

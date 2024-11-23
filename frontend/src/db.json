@@ -1,0 +1,120 @@
+{
+    "assets": {
+      "logo": "./logo.png",
+      "search": "./search.png",
+      "cart": "./cart.png",
+      "about_img": "./about_img.jpg",
+      "rating_img": "./rating_img.jpg",
+      "minus": "./minus.png",
+      "cross": "./cross.png",
+      "fb_icon": "./fb_icon.png",
+      "tw_icon": "./tw_icon.png",
+      "ld_icon": "./ld_icon.png"
+    },
+    "major_list": [
+      {
+        "category": "burger",
+        "major_img": "./burger1.jpg",
+        "major_name": "Burger types"
+      },
+      {
+        "category": "injera",
+        "major_img": "./injera1.jpg",
+        "major_name": "My favorite"
+      },
+      {
+        "category": "incrideble",
+        "major_img": "./header_img3.jpg",
+        "major_name": "Incrideble type"
+      },
+      {
+        "category": "cake",
+        "major_img": "./cake1.jpg",
+        "major_name": "Sweet cake"
+      },
+      {
+        "category": "bread",
+        "major_img": "./bread3.jpg",
+        "major_name": "Bread"
+      },
+      {
+        "category": "burger",
+        "major_img": "./burger5.jpg",
+        "major_name": "Wow burgers"
+      },
+      {
+        "category": "banana",
+        "major_img": "./banana1.jpg",
+        "major_name": "Fruits"
+      },
+      {
+        "category": "chiken",
+        "major_img": "./chiken3.jpg",
+        "major_name": "Delicious Chicken"
+      },
+      {
+        "category": "breakfast",
+        "major_img": "./menu_breakfast1.jpg",
+        "major_name": "Breakfast"
+      },
+      {
+        "category": "chiken",
+        "major_img": "./chiken3.jpg",
+        "major_name": "Chicken delicious"
+      },
+      {
+        "category": "chps",
+        "major_img": "./chps1.jpg",
+        "major_name": "Chips"
+      },
+      {
+        "category": "lunch",
+        "major_img": "./menu_lunch1.jpg",
+        "major_name": "Lunch"
+      },
+      {
+        "category": "injera",
+        "major_img": "./injera14.jpg",
+        "major_name": "Ethiopian injera"
+      },
+      {
+        "category": "piza",
+        "major_img": "./piza2.jpg",
+        "major_name": "Pizza"
+      },
+      {
+        "category": "rice",
+        "major_img": "./rice1.jpg",
+        "major_name": "Rice"
+      },
+      {
+        "category": "milk",
+        "major_img": "./milk1.jpg",
+        "major_name": "Yogurt"
+      },
+      {
+        "category": "piza",
+        "major_img": "./piza5.jpg",
+        "major_name": "Sweet pizzas"
+      },
+      {
+        "category": "dinner",
+        "major_img": "./menu_dinner1.jpg",
+        "major_name": "Dinner"
+      },
+      {
+        "category": "desert",
+        "major_img": "./menu_desert1.jpg",
+        "major_name": "Desserts"
+      },
+      {
+        "category": "lemon",
+        "major_img": "./lemon1.jpg",
+        "major_name": "Lemon fruits"
+      },{
+        "catagory": "lunch",
+        "major_img":"./menu_breakfast1.jpg",
+        "major_name":"Burger types"
+      }
+    ]
+}

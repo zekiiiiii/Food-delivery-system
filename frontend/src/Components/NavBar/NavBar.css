@@ -1,0 +1,171 @@
+.navbar {
+  height: 5vw;
+  height: 5vw;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-left {
+  width: 5vw;
+  height: 5vw;
+}
+.navbar-left .logo-img {
+  width: 5vw;
+  height: 5vw;
+  cursor: pointer;
+}
+.navbar-center {
+  width: 40vw;
+  height: 5vw;
+}
+.navbar-center-menu {
+  width: 40vw;
+  height: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.navbar-center-menu a {
+  display: inline-block;
+  font-size: 20px;
+  margin: 3px 20px;
+  color: #0c1224;
+  cursor: pointer;
+}
+.navbar-center-menu a:hover {
+  opacity: 0.7;
+  color: #000;
+}
+.navbar-center-menu .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #7e4971;
+}
+.navbar-right {
+  width: 20vw;
+  height: 5vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 25px;
+}
+.search-img {
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+}
+.cart {
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+}
+.cart_img {
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+}
+.dot {
+  position: absolute;
+  min-height: 9px;
+  min-width: 9px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: 60%;
+  left: 65%;
+}
+.account button {
+  padding: 5px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #9797ed;
+  cursor: pointer;
+}
+
+.account button:hover {
+  color: #fff;
+  background-color: #7f7fe9;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.navbar-change {
+  background-color: #e99b0a;
+  height: 5vw;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.btn-change {
+  background-color: #fff;
+}
+.btn-change :hover {
+  color: #0000ff;
+  background-color: #fff;
+}
+
+
+
+@media (max-width: 1050px) {
+  .navbar-left .logo-img {
+    width: 140px;
+  }
+  .navbar-center-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+  .navbar-right button{
+padding: 8px 25px;
+  }
+}@media (max-width: 190px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right .search-img {
+    width: 20px;
+  }
+  .navbar-right .cart{
+    width: 20px;
+  }
+ .account button{
+  padding: 1px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #d33307;
+  cursor: pointer;
+}}
+@media (max-width: 750px) {
+
+  .navbar-center-menu {
+   display: none;
+  }
+}
+ 

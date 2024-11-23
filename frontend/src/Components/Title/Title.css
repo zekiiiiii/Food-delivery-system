@@ -1,0 +1,19 @@
+.titles{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.titles h1{
+font-size: 40px;
+color:#000000;
+font-weight: bold;
+}
+.titles p{
+    font-size: 25px;
+font-weight: normal;
+color: #3f49cb;
+}
