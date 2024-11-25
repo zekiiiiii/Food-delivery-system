@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import axios from "axios"
 import './Add.css';
 import { assets } from "../../assets/assets";
-const Add = () => {
+import { toast } from "react-toastify";
 
-const [image, setImage] = useState(false)
+const Add = () => {
+const url = "http://localhost:4000"
+  const [image, setImage] = useState(false)
 const [data, setData] = useState({
   name: "",
   description: "",
@@ -23,6 +26,20 @@ forData.append("description", data.description)
 forData.append("price", Number(data.price))
 forData.append("category", data.category)
 forData.append("image", image)
+const response = await axios.post(`${url}/api/food/add`, FormData)
+if (response.data.success) {
+  setData({
+    name: "",
+    description: "",
+    price:"",
+    category: "Salad"
+  })
+  setImage(false)
+  toast.success(response.data.message)
+}
+else{
+toast.error(response.data.message)
+}
 }
 
   return (
@@ -37,7 +54,7 @@ forData.append("image", image)
         </div>
         <div className="add-product-name flex-col">
           <p>Product name</p>
-          <input onChange={onChangeHandler} value={data.name} type="text" name="name" placeholder="Type here" />
+          <input onChange={onChangeHandler} value={data.name} type="text" name="name" placeholder="Type here " required />
         </div>
         <div className="add-product-desc flex-col">
           <p>Product description</p>
@@ -45,6 +62,7 @@ forData.append("image", image)
             name="description"
             rows="6"
             placeholder="Write content here"
+            required
           ></textarea>
         </div>
         <div className="add-category-price">
@@ -63,7 +81,7 @@ forData.append("image", image)
           </div>
           <div className="add-price flex-col">
             <p>Product price</p>
-            <input onChange={onChangeHandler} value={data.price} type="number" name="price" placeholder="$20" />
+            <input onChange={onChangeHandler} value={data.price} type="number" name="price" placeholder="$20" required />
           </div>
         </div>
         <button type="submit" className="add-btn">
