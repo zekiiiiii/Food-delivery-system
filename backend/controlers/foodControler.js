@@ -33,7 +33,7 @@ res.json({success:true, data:foods})
 }
 catch(error){
 console.log(error)
-res.json({success:true, message:"Error! no list"})
+res.json({success:false, message:"Error! no list"})
 }
 }
 

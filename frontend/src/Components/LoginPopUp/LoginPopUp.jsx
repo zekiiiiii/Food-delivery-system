@@ -1,37 +1,92 @@
-import React, { useState } from 'react'
-import './LoginPopUp.css'
-import { assets } from '../../assets/assets'
+import React, { useContext, useState } from "react";
+import "./LoginPopUp.css";
+import { assets } from "../../assets/assets";
+import { StoreContext } from "../../Context/StoreContext";
+import axios from 'axios'
 
-const LoginPopUp = ({setShowLogin}) => {
-    const [currentState, setCurrentState] = useState("Login")
+const LoginPopUp = ({ setShowLogin }) => {
+  const { url } = useContext(StoreContext);
+  const [currentState, setCurrentState] = useState("Login");
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const onChangeHandler = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData((data) => ({ ...data, [name]: value }));
+  };
+
+  const onLogin = async (event) => {
+    event.preventDefault();
+    let newUser = url;
+    if (currentState === "Login") {
+      newUser += "/api/user/login";
+    } else {
+      newUser += "/api/user/register";
+    }
+    const response = axios.post(newUser, data);
+  };
+
   return (
-    <div className='Login-popup'>
-        <form action="" className="login-popup-container">
-            <div className="login-popup-title">
-                <h2>{currentState}</h2>
-                <img onClick={ ()=> setShowLogin(false)} src={assets.cross} alt="" />
-            </div>
-            <div className="login-popup-inputs">
-                {currentState==='Login'? <></>
-                :
-                <input type="text" placeholder='Your name' required/>}
-                <input type="email" placeholder='Your email' required/>
-                <input type="password" placeholder='password'required />
-            </div>
-            <button>{currentState==='Sign Up' ? 'create account':'Login'}</button>
-            <div className="login-popup-condition">
-                <input type="checkbox" required />
-                <p>By continuing, I agree to the  terms and privacy policy.</p>
-            </div>
-            {
-             currentState ==='Login'?
-            <p>Create a new account?<span onClick={()=>setCurrentState('Sign Up')}>Sign up</span></p>
-            :
-            <p>Alreay have an account? <span onClick={()=>setCurrentState('Login')}>Login</span></p>
-            }
-        </form>
+    <div className="Login-popup">
+      <form onSubmit={onLogin} className="login-popup-container">
+        <div className="login-popup-title">
+          <h2>{currentState}</h2>
+          <img onClick={() => setShowLogin(false)} src={assets.cross} alt="" />
+        </div>
+        <div className="login-popup-inputs">
+          {currentState === "Login" ? (
+            <></>
+          ) : (
+            <input
+              name="name"
+              onChange={onChangeHandler}
+              value={data.name}
+              type="text"
+              placeholder="Enter your name here"
+              required
+            />
+          )}
+          <input
+            name="email"
+            onChange={onChangeHandler}
+            value={data.email}
+            type="email"
+            placeholder="Enter your email here"
+            required
+          />
+          <input
+            name="password"
+            onChange={onChangeHandler}
+            value={data.password}
+            type="password"
+            placeholder="Enter password here"
+            required
+          />
+        </div>
+        <button type="submit">
+          {currentState === "Sign Up" ? "create account" : "Login"}
+        </button>
+        <div className="login-popup-condition">
+          <input type="checkbox" required />
+          <p>By continuing, I agree to the terms and privacy policy.</p>
+        </div>
+        {currentState === "Login" ? (
+          <p>
+            Create a new account?
+            <span onClick={() => setCurrentState("Sign Up")}>Sign up</span>
+          </p>
+        ) : (
+          <p>
+            Alreay have an account?{" "}
+            <span onClick={() => setCurrentState("Login")}>Login</span>
+          </p>
+        )}
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default LoginPopUp
+export default LoginPopUp;
