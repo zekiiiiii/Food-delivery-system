@@ -116,8 +116,38 @@
   color: #0000ff;
   background-color: #fff;
 }
-
-
+.navbar_profile{
+  position: relative;
+}
+.nav-profile-dropdown{
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+}
+.navbar_profile:hover .nav-profile-dropdown{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffff;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  outline: 2px solid white;
+  list-style-type: none;
+}
+.nav-profile-dropdown li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.nav-profile-dropdown li:hover{
+  color: tomato;
+}
+.nav-profile-dropdown img{
+  width: 20px;
+}
 
 @media (max-width: 1050px) {
   .navbar-left .logo-img {

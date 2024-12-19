@@ -7,6 +7,8 @@ import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
 import LoginPopUp from "./Components/LoginPopUp/LoginPopUp";
 import Footer from "./Components/Footer/Footer";
 import Error404 from "./Pages/Error404/Error404";
+import Verify from "./Pages/Verify/Verify";
+import Myorders from "./Pages/Myorders/Myorders";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -22,6 +24,9 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/place-order" element={<PlaceOrder />} />
           <Route path="*" element={<Error404/>}/>
+          <Route path="/verify" element={<Verify/>}/>
+          <Route path="/myorders" element={<Myorders/>}/>
+
         </Routes>
         
         <Footer />

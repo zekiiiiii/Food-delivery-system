@@ -2,10 +2,10 @@ import React, { useContext, useState } from "react";
 import "./LoginPopUp.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../Context/StoreContext";
-import axios from 'axios'
+import axios from "axios";
 
 const LoginPopUp = ({ setShowLogin }) => {
-  const { url } = useContext(StoreContext);
+  const { url, setToken } = useContext(StoreContext);
   const [currentState, setCurrentState] = useState("Login");
   const [data, setData] = useState({
     name: "",
@@ -20,13 +20,20 @@ const LoginPopUp = ({ setShowLogin }) => {
 
   const onLogin = async (event) => {
     event.preventDefault();
-    let newUser = url;
+    let newUrl = url;
     if (currentState === "Login") {
-      newUser += "/api/user/login";
+      newUrl += "/api/user/login";
     } else {
-      newUser += "/api/user/register";
+      newUrl += "/api/user/register";
     }
-    const response = axios.post(newUser, data);
+    const response = await axios.post(newUrl, data);
+    if (response.data.success) {
+      setToken(response.data.token);
+      localStorage.setItem("token", response.data.token);
+      setShowLogin(false);
+    } else {
+      alert(response.data.message);
+    }
   };
 
   return (

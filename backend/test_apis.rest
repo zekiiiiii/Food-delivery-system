@@ -1,0 +1,25 @@
+POST http://localhost:4000/api/food/add
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="name"
+
+Pizza
+--boundary
+Content-Disposition: form-data; name="description"
+
+Delicious pizza with cheese
+--boundary
+Content-Disposition: form-data; name="price"
+
+10.99
+--boundary
+Content-Disposition: form-data; name="category"
+
+Main Course
+--boundary
+Content-Disposition: form-data; name="image"; filename="piza1.jpg"
+Content-Type: image/jpeg
+
+<Content of piza1.jpg>
+--boundary--

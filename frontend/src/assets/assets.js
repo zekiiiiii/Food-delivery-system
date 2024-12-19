@@ -8,6 +8,10 @@ import cross from "./cross.png";
 import fb_icon from "./fb_icon.png";
 import tw_icon from "./tw_icon.png";
 import ld_icon from "./ld_icon.png";
+import bag_icon from "./bag_icon.png";
+import profile_icon from "./profile_icon.png";
+import parcel_icon from "./parcel_icon.png"
+import logout_icon from "./profile_icon.png";
 
 import desert1 from "./desert1.jpg";
 import desert2 from "./desert2.jpg";
@@ -99,6 +103,10 @@ export const assets = {
   fb_icon,
   tw_icon,
   ld_icon,
+  bag_icon,
+  profile_icon,
+  parcel_icon,
+  logout_icon,
 };
 
 export const menu_list = [
@@ -110,8 +118,7 @@ export const menu_list = [
     menu_img: injera1,
     menu_name: "Ethiopian injera",
   },
-  { menu_img: burger1, 
-   menu_name: "Burger types" },
+  { menu_img: burger1, menu_name: "Burger types" },
 
   {
     menu_img: menu_breakfast1,
@@ -149,15 +156,6 @@ export const food_list = [
   {
     _id: 1,
     category: "Desert",
-    name: "Konjo desert",
-    image: desert1,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 2,
-    category: "Desert",
     name: "Sweet desert",
     image: desert2,
     price: 100,
@@ -165,14 +163,13 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 3,
+    _id: 2,
     category: "Desert",
     name: "Greek desert",
     image: desert3,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-    category: "piza",
   },
   {
     _id: 4,
@@ -184,46 +181,10 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 5,
+    _id: 4,
     category: "Desert",
     name: "My desert",
     image: desert5,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 6,
-    category: "Desert",
-    name: "Desert great",
-    image: desert6,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 7,
-    category: "Desert",
-    name: "Your desert",
-    image: desert7,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 8,
-    category: "wow desert",
-    name: "Greatest desert",
-    image: desert8,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 9,
-    category: "Desert",
-    name: "Delicious desert",
-    image: desert9,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -247,15 +208,6 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 12,
-    category: "Ethiopian injera",
-    name: "Migbe injera",
-    image: injera3,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 13,
     category: "Ethiopian injera",
     name: "MY Delicious",
@@ -274,55 +226,10 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 15,
-    category: "Ethiopian injera",
-    name: "This injera",
-    image: injera6,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 16,
     category: "Ethiopian injera",
     name: "Ethiopia injera",
     image: injera7,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 17,
-    category: "Ethiopian injera",
-    name: "wow delicious",
-    image: injera8,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 18,
-    category: "Ethiopian injera",
-    name: "My order",
-    image: injera9,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 19,
-    category: "Ethiopian injera",
-    name: "Your order",
-    image: injera10,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 20,
-    category: "Ethiopian injera",
-    name: "Get injera",
-    image: injera11,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -355,15 +262,6 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 24,
-    category: "Breakfast reserved",
-    name: "Break it",
-    image: menu_breakfast4,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 25,
     category: "Breakfast reserved",
     name: "greek Delicious",
@@ -373,28 +271,10 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 26,
-    category: "Breakfast reserved",
-    name: "Great food",
-    image: menu_breakfast6,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 27,
     category: "Lunch reserved",
     name: "Do this",
     image: menu_lunch1,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 28,
-    category: "Lunch reserved",
-    name: "Lunch 6pm",
-    image: menu_lunch2,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -418,14 +298,6 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 31,
-    category: "Lunch reserved",
-    name: "Do this",
-    image: menu_lunch5,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 32,
     category: "Lunch reserved",
     name: "Order lunch",
@@ -444,37 +316,10 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 34,
-    category: "Burger types",
-    name: "New burger",
-    image: burger2,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 35,
     category: "Burger types",
     name: "Amazing burger",
     image: burger3,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 36,
-    category: "Burger types",
-    name: "New burger",
-    image: burger4,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 37,
-    category: "Burger types",
-    name: "US burger",
-    image: burger5,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -489,28 +334,10 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 39,
-    category: "Burger types",
-    name: "wow burger",
-    image: burger7,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 40,
     category: "Burger types",
     name: "Asian burger",
     image: burger8,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 41,
-    category: "Burger types",
-    name: "New burger",
-    image: burger9,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -529,24 +356,6 @@ export const food_list = [
     category: "Delicious breads",
     name: "New bread",
     image: bread2,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 44,
-    category: "Delicious breads",
-    name: "Sweet bread",
-    image: bread3,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 45,
-    category: "Delicious breads",
-    name: "Favorite bread",
-    image: bread4,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -616,64 +425,10 @@ export const food_list = [
     category: "delicious",
   },
   {
-    _id: 53,
-    category: "Fruits",
-    name: "Your favorite",
-    image: fruit5,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 54,
-    category: "Fruits",
-    name: "Chikna chikna",
-    image: fruit6,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 55,
-    category: "Fruits",
-    name: "Weyzero lemone",
-    image: fruit7,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 56,
-    category: "Sweet piza",
-    name: "Deloicious piza",
-    image: piza1,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 57,
-    category: "Sweet piza",
-    name: "One piza",
-    image: piza2,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 58,
     category: "Sweet piza",
     name: "Your piza",
     image: piza3,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 59,
-    category: "Sweet piza",
-    name: "Chuka chuka piza",
-    image: piza4,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
@@ -733,15 +488,6 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 66,
-    category: "Dinner reserved",
-    name: "Delicious dinner",
-    image: menu_dinner4,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 67,
     category: "Dinner reserved",
     name: "Dinner",
@@ -787,15 +533,6 @@ export const food_list = [
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
   },
   {
-    _id: 72,
-    category: "Ethiopian chicken",
-    name: "Indian chicken",
-    image: chiken4,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
     _id: 73,
     category: "Ethiopian chicken",
     name: "Best chicken",
@@ -809,42 +546,6 @@ export const food_list = [
     category: "Ethiopian chicken",
     name: "Cool chicken",
     image: chiken6,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 75,
-    category: "Ethiopian chicken",
-    name: "Australian chicken",
-    image: chiken7,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 76,
-    category: "Ethiopian chicken",
-    name: "My chicken",
-    image: chiken8,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 77,
-    category: "Ethiopian chicken",
-    name: "Amazing chicken",
-    image: chiken9,
-    price: 100,
-    description:
-      "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
-  },
-  {
-    _id: 78,
-    category: "Ethiopian chicken",
-    name: "Habesha chicken",
-    image: chiken10,
     price: 100,
     description:
       "This is a Greek delicious food in Ethiopia, so I recommend you to buy this and enjoy it with your family",
